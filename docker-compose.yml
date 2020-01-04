@@ -1,0 +1,51 @@
+version: '3.7'
+
+services:
+
+  mariadb:
+    container_name: ${MARIADB_NAME}
+    image: bitnami/mariadb:${MARIADB_TAG:-latest}
+    restart: always
+    ports:
+      - ${MARIADB_PORT}:3306
+    volumes:
+      - mariadb_data:/bitnami
+    networks:
+      - default
+    environment:
+      MARIADB_ROOT_USER: ${MARIADB_ROOT_USER}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+
+  phpmyadmin:
+    container_name: ${PHPMYADMIN_NAME}
+    build:
+      context: .
+      args:
+        PHPMYADMIN_TAG: ${PHPMYADMIN_TAG}
+    ports:
+      - ${PHPMYADMIN_HTTP_PORT}:80
+      - ${PHPMYADMIN_HTTPS_PORT}:443
+    depends_on:
+      - mariadb
+    volumes:
+      - phpmyadmin_data:/bitnami
+    networks:
+      - default
+    environment:
+      PHPMYADMIN_ALLOW_ARBITRARY_SERVER: ${PHPMYADMIN_ALLOW_ARBITRARY_SERVER}
+      PHPMYADMIN_ALLOW_NO_PASSWORD: ${PHPMYADMIN_ALLOW_NO_PASSWORD}
+      DATABASE_HOST: ${PHPMYADMIN_DATABASE_HOST}
+      DATABASE_PORT_NUMBER: ${PHPMYADMIN_DATABASE_PORT_NUMBER}
+      DATABASE_ENABLE_SSL: ${PHPMYADMIN_DATABASE_ENABLE_SSL}
+      DATABASE_SSL_KEY: ${PHPMYADMIN_DATABASE_SSL_KEY}
+      DATABASE_SSL_CERT: ${PHPMYADMIN_DATABASE_SSL_CERT}
+      DATABASE_SSL_CA: ${PHPMYADMIN_DATABASE_SSL_CA}
+      DATABASE_SSL_CA_PATH: ${PHPMYADMIN_DATABASE_SSL_CA_PATH}
+      DATABASE_SSL_CIPHERS: ${PHPMYADMIN_DATABASE_SSL_CIPHERS}
+      DATABASE_SSL_VERIFY: ${PHPMYADMIN_DATABASE_SSL_VERIFY}
+
+volumes:
+  mariadb_data:
+    driver: local
+  phpmyadmin_data:
+    driver: local
