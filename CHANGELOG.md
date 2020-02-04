@@ -2,7 +2,9 @@
 
 ### Commits
 
-- Attempt to update Dockerfile [`7556948`](https://github.com/frugan-it/docker-bitnami-phpmyadmin/commit/7556948cc38f085c8ddc0e1481fc1f6f82bce4bb)
+- Attempt to update Dockerfile [`506c3b9`](https://github.com/frugan-it/docker-bitnami-phpmyadmin/commit/506c3b987f306dc5ff78c0d07ee9cbea9d2b39a5)
+- Restored Dockerfile [`f7e36d9`](https://github.com/frugan-it/docker-bitnami-phpmyadmin/commit/f7e36d905e0c16fe129e4732cc18b6281dc62d6d)
+- Attempt to update Dockerfile [`544b296`](https://github.com/frugan-it/docker-bitnami-phpmyadmin/commit/544b296ebfb43e37dc8ba744f147dd85e0999948)
 - Merge tag 'v1.0.1' into develop [`6c977da`](https://github.com/frugan-it/docker-bitnami-phpmyadmin/commit/6c977da19b8ce7d2f194bdc8a9b5a1958cab9ecc)
 
 ## [v1.0.1](https://github.com/frugan-it/docker-bitnami-phpmyadmin/compare/v1.0.0...v1.0.1) - 2020-02-04
