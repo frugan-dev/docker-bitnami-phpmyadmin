@@ -7,5 +7,5 @@ FROM bitnami/phpmyadmin:${PHPMYADMIN_TAG:-latest}
 RUN set -ex; \
     { \
         echo ''; \
-        echo 'if(file_exists(__DIR__."/config.custom.php")) include_once __DIR__."/config.custom.php";'; \
+    #    echo 'if(file_exists(__DIR__."/config.custom.php")) include_once __DIR__."/config.custom.php";'; \
     } >> /bitnami/phpmyadmin/config.inc.php;
