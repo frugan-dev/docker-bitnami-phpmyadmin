@@ -1,8 +1,15 @@
+## [Unreleased](https://github.com/frugan-it/docker-bitnami-phpmyadmin/compare/v1.0.0...HEAD)
+
+### Commits
+
+- Updated CHANGELOG [`31ec1a5`](https://github.com/frugan-it/docker-bitnami-phpmyadmin/commit/31ec1a54379146700272cbc586ebe19263210e7a)
+- Added config.custom.php in Dockerfile [`3164894`](https://github.com/frugan-it/docker-bitnami-phpmyadmin/commit/3164894fdd17e2d79266b5d635debe7588dd5a4b)
+
 ## v1.0.0 - 2020-01-04
 
 ### Commits
 
-- Initial commit 
+- Initial commit [`cd1151d`](https://github.com/frugan-it/docker-bitnami-phpmyadmin/commit/cd1151dc421e14c6ec4c18303571e967c8ec886f)
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
