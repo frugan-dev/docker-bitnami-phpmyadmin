@@ -2,4 +2,6 @@
 
 ARG PHPMYADMIN_TAG
 
-FROM bitnami/phpmyadmin:${PHPMYADMIN_TAG:-latest}
+ENV PHPMYADMIN_TAG=${PHPMYADMIN_TAG:-latest}
+
+FROM bitnami/phpmyadmin:${PHPMYADMIN_TAG}
